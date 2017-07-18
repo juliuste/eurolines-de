@@ -1,0 +1,39 @@
+{
+	"name": "eurolines-de",
+	"description": "Client for eurolines.de coach travel.",
+	"version": "0.0.0",
+	"keywords": [
+		"eurolines",
+		"bus",
+		"coach",
+		"germany",
+		"europe",
+		"travel"
+	],
+	"author": "Julius Tens <mail@juliustens.de>",
+	"homepage": "https://github.com/juliuste/eurolines-de",
+	"repository": "juliuste/eurolines-de",
+	"bugs": "https://github.com/juliuste/eurolines-de/issues",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"lib/*"
+	],
+	"dependencies": {
+		"fetch-ponyfill": "^4.1.0",
+		"lodash.isobject": "^3.0.2",
+		"lodash.merge": "^4.6.0",
+		"pinkie-promise": "^2.0.1"
+	},
+	"devDependencies": {
+		"tape": "^4.7.0"
+	},
+	"scripts": {
+		"test": "node test.js",
+		"prepublish": "npm test"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"license": "MIT"
+}

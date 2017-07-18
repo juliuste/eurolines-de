@@ -40,7 +40,7 @@ The defaults for `opt` look like this:
 ```js
 {
     language: 'de',
-    origin: null // set to specific station id for stations reachable by there
+    origin: null // set to specific station id to filter for stations reachable by there
 }
 ```
 

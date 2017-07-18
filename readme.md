@@ -1,6 +1,6 @@
 # eurolines-de
 
-JavaScript client for the [eurolines.de](https://www.eurolines.de/) coach travel API. Complies with the [friendly public transport format](https://github.com/public-transport/friendly-public-transport-format). *In progess… Still missing: `journeys`.*
+JavaScript client for the [eurolines.de](https://www.eurolines.de/) coach travel API. Complies with the [friendly public transport format](https://github.com/public-transport/friendly-public-transport-format). *In progess…*
 
 [![npm version](https://img.shields.io/npm/v/eurolines-de.svg)](https://www.npmjs.com/package/eurolines-de)
 [![Build Status](https://travis-ci.org/juliuste/eurolines-de.svg?branch=master)](https://travis-ci.org/juliuste/eurolines-de)

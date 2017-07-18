@@ -21,7 +21,7 @@ This package contains data in the [*Friendly Public Transport Format*](https://g
 
 ### `stations([query], [opt])`
 
-Using `eurolines.stations`, you can get all stations operated bei eurolines.
+Get all stations operated bei eurolines.
 
 ```js
 const stations = require('eurolines-de').stations

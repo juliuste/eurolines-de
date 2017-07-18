@@ -49,19 +49,79 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 ```js
 [
     {
-        "type": "station",
-        "id": "Aachen",
-        "name": "Aachen (DE)"
+        type: 'station',
+        id: 'Aachen',
+        name: 'Aachen (DE)'
     },
     {
-        "type": "station",
-        "id": "Aalborg",
-        "name": "Aalborg (DK)"
+        type: 'station',
+        id: 'Aalborg',
+        name: 'Aalborg (DK)'
     },
     {
-        "type": "station",
-        "id": "Aalen",
-        "name": "Aalen (DE)"
+        type: 'station',
+        id: 'Aalen',
+        name: 'Aalen (DE)'
+    }
+    // …
+]
+```
+
+### `journeys(origin, destination, date = Date.now(), opt = {})`
+
+Get directions and prices for routes from A to B. ***scraped 😕***
+
+```js
+const journeys = require('eurolines-de').journeys
+
+journeys('Berlin', 'Paris', new Date(), {passengers: 1})
+.then(console.log)
+.catch(console.error)
+```
+
+`defaults`, partially overridden by the `opt` parameter, looks like this:
+
+```js
+const defaults = {
+    passengers: 1
+}
+```
+
+Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/promise) that will resolve with an array of `journey`s in the [*Friendly Public Transport Format*](https://github.com/public-transport/friendly-public-transport-format) which looks as follows.
+*Note that the legs are not fully spec-compatible, as the `schedule` is missing in legs, all dates are Date() objects instead of ISO strings and due to API-specific reasons, there will always only be one leg and the additional `transfers` key instead.*
+
+```js
+[
+    {
+        origin: 'Berlin',
+        destination: 'Paris',
+        type: 'journey',
+        id: 'BerlinParisWed Jul 19 2017 19:30:00 GMT+0200 (CEST)Thu Jul 20 2017 09:45:00 GMT+0200 (CEST)0',
+        departure: '2017-07-19T17:30:00.000Z', // JS Date() object
+        arrival: '2017-07-20T07:45:00.000Z', // JS Date() object
+        transfers: 0,
+        price: {
+            currency: 'EUR',
+            amount: 83,
+            fares: [
+                {
+                    type: 'fare',
+                    model: 'normal',
+                    price: {
+                        currency: 'EUR',
+                        amount: 83
+                    }
+                }
+            ]
+        },
+        legs: [
+            {
+                origin: 'Berlin',
+                destination: 'Paris',
+                departure: '2017-07-19T17:30:00.000Z', // JS Date() object
+                arrival: '2017-07-20T07:45:00.000Z' // JS Date() object
+            }
+        ]
     }
     // …
 ]

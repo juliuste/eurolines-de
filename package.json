@@ -1,7 +1,7 @@
 {
 	"name": "eurolines-de",
 	"description": "Client for eurolines.de coach travel.",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"keywords": [
 		"eurolines",
 		"bus",
@@ -20,12 +20,15 @@
 		"lib/*"
 	],
 	"dependencies": {
+		"cheerio": "^1.0.0-rc.2",
 		"fetch-ponyfill": "^4.1.0",
 		"lodash.isobject": "^3.0.2",
 		"lodash.merge": "^4.6.0",
+		"moment-timezone": "^0.5.13",
 		"pinkie-promise": "^2.0.1"
 	},
 	"devDependencies": {
+		"lodash.isdate": "^4.0.1",
 		"tape": "^4.7.0"
 	},
 	"scripts": {

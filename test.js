@@ -11,6 +11,7 @@ tape('eurolines.stations', (t) => {
 		t.ok(stations.length > 100, 'stations length')
 		t.ok(stations.filter((s) => s.id === 'Berlin').length === 1, 'stations berlin')
 	})
+	.catch((e) => {throw new Error(e)})
 	eurolines.stations('Frankfurt am Ma').then((stations) => {
 		t.ok(stations.length === 1, 'stations -> Frankfurt length')
 		t.ok(stations[0].type === 'station', 'stations -> Frankfurt type')

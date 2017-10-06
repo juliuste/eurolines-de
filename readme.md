@@ -1,7 +1,5 @@
 # eurolines-de
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/eurolines-de.svg)](https://greenkeeper.io/)
-
 JavaScript client for the [eurolines.de](https://www.eurolines.de/) coach travel API. Complies with the [friendly public transport format](https://github.com/public-transport/friendly-public-transport-format). *In progess…*
 
 [![npm version](https://img.shields.io/npm/v/eurolines-de.svg)](https://www.npmjs.com/package/eurolines-de)

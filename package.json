@@ -1,7 +1,7 @@
 {
 	"name": "eurolines-de",
 	"description": "Client for the eurolines.de coach travel API.",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"keywords": [
 		"eurolines",
 		"bus",

@@ -4,6 +4,7 @@ JavaScript client for the [eurolines.de](https://www.eurolines.de/) coach travel
 
 [![npm version](https://img.shields.io/npm/v/eurolines-de.svg)](https://www.npmjs.com/package/eurolines-de)
 [![Build Status](https://travis-ci.org/juliuste/eurolines-de.svg?branch=master)](https://travis-ci.org/juliuste/eurolines-de)
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/eurolines-de.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/juliuste/eurolines-de.svg)](https://david-dm.org/juliuste/eurolines-de)
 [![dev dependency status](https://img.shields.io/david/dev/juliuste/eurolines-de.svg)](https://david-dm.org/juliuste/eurolines-de#info=devDependencies)
 [![license](https://img.shields.io/github/license/juliuste/eurolines-de.svg?style=flat)](LICENSE)

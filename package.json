@@ -21,22 +21,23 @@
 	],
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
-		"got": "^8.0.0",
+		"got": "^8.3.1",
 		"lodash.isobject": "^3.0.2",
-		"lodash.merge": "^4.6.0",
-		"moment-timezone": "^0.5.13",
-		"ssl-root-cas": "^1.2.4"
+		"lodash.merge": "^4.6.1",
+		"moment-timezone": "^0.5.21",
+		"ssl-root-cas": "^1.2.5"
 	},
 	"devDependencies": {
 		"lodash.isdate": "^4.0.1",
-		"tape": "^4.7.0"
+		"tape": "^4.9.1",
+		"validate-fptf": "^2.1.1"
 	},
 	"scripts": {
 		"test": "node test.js",
 		"prepare": "npm test"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"license": "ISC"
 }

@@ -16,7 +16,7 @@ tape('eurolines.stations', async t => {
 
 	const frankfurtStations = await eurolines.stations('Frankfurt')
 	t.ok(frankfurtStations.length >= 1, 'stations -> Frankfurt length')
-	t.ok(frankfurtStations[0].id === 'Frankfurt', 'stations -> Frankfurt id')
+	t.ok(frankfurtStations[0].id.substr(0, 9) === 'Frankfurt', 'stations -> Frankfurt id')
 
 	t.end()
 })

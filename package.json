@@ -1,24 +1,32 @@
 {
 	"name": "eurolines-de",
-	"description": "Client for the eurolines.de coach travel API.",
 	"version": "0.2.0",
+	"description": "Client for the eurolines.de coach travel API.",
 	"keywords": [
-		"eurolines",
 		"bus",
 		"coach",
-		"germany",
+		"eurolines",
 		"europe",
+		"germany",
 		"travel"
 	],
-	"author": "Julius Tens <mail@juliustens.eu>",
 	"homepage": "https://github.com/juliuste/eurolines-de",
-	"repository": "juliuste/eurolines-de",
 	"bugs": "https://github.com/juliuste/eurolines-de/issues",
-	"main": "index.js",
+	"repository": "juliuste/eurolines-de",
+	"license": "ISC",
+	"author": "Julius Tens <mail@juliustens.eu>",
 	"files": [
-		"index.js",
 		"lib/*"
 	],
+	"main": "lib/index.js",
+	"scripts": {
+		"check-deps": "depcheck",
+		"fix": "eslint --fix lib",
+		"lint": "eslint lib",
+		"prepare": "npm test",
+		"prepublishOnly": "npm test",
+		"test": "npm run lint && npm run check-deps && node test"
+	},
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
 		"got": "^8.3.1",
@@ -28,16 +36,18 @@
 		"ssl-root-cas": "^1.2.5"
 	},
 	"devDependencies": {
+		"depcheck": "^0.6.11",
+		"eslint": "^5.8.0",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-node": "^8.0.0",
+		"eslint-plugin-promise": "^4.0.1",
+		"eslint-plugin-standard": "^4.0.0",
 		"lodash.isdate": "^4.0.1",
 		"tape": "^4.9.1",
 		"validate-fptf": "^2.1.1"
 	},
-	"scripts": {
-		"test": "node test.js",
-		"prepare": "npm test"
-	},
 	"engines": {
 		"node": ">=8"
-	},
-	"license": "ISC"
+	}
 }

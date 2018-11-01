@@ -1,7 +1,7 @@
 'use strict'
 
 const tape = require('tape')
-const eurolines = require('./index')
+const eurolines = require('.')
 const validate = require('validate-fptf')
 const moment = require('moment-timezone')
 const isDate = require('lodash.isdate')

@@ -5,7 +5,6 @@ const addPromiseSupport = require('tape-promise').default
 const tape = addPromiseSupport(tapeWithoutPromise)
 const validate = require('validate-fptf')
 const moment = require('moment-timezone')
-const isDate = require('lodash.isdate')
 const eurolines = require('.')
 
 tape('eurolines.stations', async t => {
@@ -24,7 +23,7 @@ tape('eurolines.stations', async t => {
 })
 
 tape('eurolines.journeys', async t => {
-	const journeys = await eurolines.journeys("Berlin", "Paris", moment.tz("Europe/Berlin").add(30, "days").toDate())
+	const journeys = await eurolines.journeys('Berlin', 'Paris', moment.tz('Europe/Berlin').add(30, 'days').toDate())
 
 	for (let journey of journeys) validate(journey)
 

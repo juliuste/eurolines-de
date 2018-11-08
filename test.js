@@ -1,10 +1,12 @@
 'use strict'
 
-const tape = require('tape')
-const eurolines = require('.')
+const tapeWithoutPromise = require('tape')
+const addPromiseSupport = require('tape-promise').default
+const tape = addPromiseSupport(tapeWithoutPromise)
 const validate = require('validate-fptf')
 const moment = require('moment-timezone')
 const isDate = require('lodash.isdate')
+const eurolines = require('.')
 
 tape('eurolines.stations', async t => {
 	const allStations = await eurolines.stations()
